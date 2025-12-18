@@ -52,7 +52,7 @@ Allows dynamic color switching (light/dark mode)*/
       opacity: 1;
       transform: translateY(0);
     }
-  }
+  } 
   @keyframes meteor {
     /*Creates diagonal shooting star effect, moving -500px at 215° angle*/
     0% {
