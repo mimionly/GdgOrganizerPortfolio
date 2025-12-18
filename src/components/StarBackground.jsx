@@ -29,7 +29,7 @@ export const StarBackground = () => {
   const generateStars = () => {
     //function to create random stars 
     const numberOfStars = Math.floor/* floor removes decimals */(
-      (window.innerWidth * window.innerHeight) /1000
+      (window.innerWidth * window.innerHeight) /10000
       //more screen area-> more stars 
     );
 
@@ -53,17 +53,17 @@ export const StarBackground = () => {
 
   const generateMeteors = () => {
     //create shooting stars
-    const numberOfMeteors = 15;
+    const numberOfMeteors = 50;
     //always 4 meteors 
     const newMeteors = [];
 
     for (let i = 0; i < numberOfMeteors; i++) {
       newMeteors.push({
         id: i, //width
-        size: Math.random() *1 + 1 , //later multiplies
+        size: Math.random() *1 + 0.1 , //later multiplies
         x: Math.random() * 100, //sarting position
-        y: Math.random() * 20, //starting position
-        delay: Math.random() * 15, //random animation start
+        y: Math.random() * 250, //starting position
+        delay: Math.random() * 10, //random animation start
         animationDuration: Math.random() * 3 + 3, //3-6
       });
     }
