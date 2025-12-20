@@ -23,14 +23,18 @@ export const Nav = () => {
     window.addEventListener("scroll" ,handleScroll);
     return ()=>  window.removeEventListener("scroll" ,handleScroll);
     },[]);
-    return <nav className={cn("fixed w-full z-40 transition-all  duration-300",isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs":"py-5"
+    return <nav className={cn("fixed w-full z-40 transition-all  duration-300",isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs":"py-2",
     )}
     >
         <div className="container flex items-center justify-between" >
             <a className="text-xl font-bold text-primary flex items-center" href="#hero">
-               <span className="relative z-10">
-                <span className="text-glow text-foreground text-5xl">Ashley Cleon Pinto</span> GDGoC Organiser
-                </span> 
+               <span className="flex flex-wrap items-center text-foreground ">
+                <span className =" text-xs sm:text-sm md:text-xl lg:text-5xl ">GDG On Campus SJEC</span>
+             
+               <span className ="text-lg sm:text-sm md:text-xl opacity-80 rounded-md bg-foreground/10 hover:bg-foreground/20 transition-colors duration-300 ">
+                | LeaderShip Portfolio
+               </span>
+              </span>
             </a>
              {/*desktop nav */}
              <div className="hidden md:flex gap-8">
@@ -43,7 +47,7 @@ export const Nav = () => {
              {/* mobile nav*/}
              <button onClick={() => setIsMenuOpen((prev ) => !prev)}  className="md:hidden p-2 text-foreground z-50"
              arial-label={isMenuOpen ? "Close Menu " : "Open Menu"}> {isMenuOpen ? <ChevronDown size ={24} /> :< LayoutGrid size ={24}/>} </button>
-             <div className= {cn("fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center hover:text-foreground/80 ",
+             <div className= {cn("fixed inset-0 bg-background/95 backdrop-opacity-0 z-40 flex flex-col items-center justify-center hover:text-foreground/80 ",
                "transition-all duration-300 md:hidden",
                 isMenuOpen ? 
                 "opacity-100 pointer-events-auto" : 
