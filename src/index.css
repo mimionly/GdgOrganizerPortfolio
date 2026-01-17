@@ -81,7 +81,7 @@ Allows dynamic color switching (light/dark mode)*/
 
   .dark {
     --background: 222 47% 4%; /* Nearly black blue */
-    --foreground: 213 31% 91%; /* Light gray text */
+    --foreground : 213 31% 91% ; /* Light gray text */
     --card: 222 47% 8%; /* Dark blue-gray cards */
     --primary: 250 65% 65%;  /* Brighter purple */
     --primary-foreground: 213 31% 91%; /* Light text */

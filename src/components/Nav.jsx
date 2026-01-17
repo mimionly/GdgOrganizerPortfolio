@@ -12,7 +12,7 @@ const navItems =[
 ]
 
 export const Nav = () => {
-    const[isScrolled , setIsScrolled] = useState(false) ;
+   const[isScrolled , setIsScrolled] = useState(false) ;
     const[isMenuOpen , setIsMenuOpen] = useState(true) ;
 
     useEffect(()=> {
@@ -29,9 +29,9 @@ export const Nav = () => {
         <div className="container flex items-center justify-between" >
             <a className="text-xl font-bold text-primary flex items-center" href="#hero">
                <span className="flex flex-wrap items-center text-foreground ">
-                <span className =" text-xs sm:text-sm md:text-xl lg:text-5xl ">GDG On Campus SJEC</span>
+                <span className =" text-xs sm:text-sm md:text-xl lg:text-4xl font"> GDG Organizer </span>
              
-               <span className ="text-lg sm:text-sm md:text-xl opacity-80 rounded-md bg-foreground/10 hover:bg-foreground/20 transition-colors duration-300 ">
+               <span className ="text-lg sm:text-sm md:text-xl opacity-80 rounded-md  transition-colors duration-300 ">
                 | LeaderShip Portfolio
                </span>
               </span>
@@ -74,8 +74,8 @@ export const Nav = () => {
               {/* object-cover: crops image to fill entire space while maintaining aspect ratio */}
               {/* NO rounded corners - fills edge to edge */}
               <img
-                src="src/assets/ashleyPinto.jpeg"
-                alt="Decorative"
+                src="src/assets/Ashleyanimated.png"
+                alt="Ashley-Pinto"
                 className="w-full h-screen object-cover opacity-30"
               />
               
