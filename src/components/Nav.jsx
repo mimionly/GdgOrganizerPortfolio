@@ -73,11 +73,7 @@ export const Nav = () => {
               {/* h-screen: image takes full viewport height */}
               {/* object-cover: crops image to fill entire space while maintaining aspect ratio */}
               {/* NO rounded corners - fills edge to edge */}
-              <img
-                src="src/assets/Ashleyanimated.png"
-                alt="Ashley-Pinto"
-                className="w-full h-screen object-cover opacity-30"
-              />
+              
               
               {/* Optional: Text overlay on top of image */}
               {/* absolute: positions text over the image */}

@@ -7,6 +7,7 @@ import { About } from "../components/About";
 import { Skills } from "../components/Skills";
 import { Proj } from "../components/proj";
 import { Contact } from "../components/contact";
+import {Footer} from "../components/Footer";
 export const Home =() => {
     return (
     <div  className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -19,6 +20,7 @@ export const Home =() => {
           <Skills />
           <Proj/>
           <Contact />
+          <Footer />
         </main>
     </div>
 

@@ -11,7 +11,8 @@ export const Hero = () => {
             <span className =" opacity-0 animate-fade-in-delay-1 text-primary">  Ashley </span>
             <span className ="text-gradient opacity-0 animate-fade-in-delay-1 text-gradient ml ">  Pinto </span>
         </h1>
-        <p className ="text-lg md:text-xl text-muted-foreground max-2-2xl sm:text-xs mx-auto opacity-0 animate-fade-in-delay-3 ">I am a self-driven and adaptable leader with proven experience in organizing successful events and programs. I possess strong written and verbal communication skills, confidence in public speaking, and effective team management abilities. As a keen observer and active listener, I quickly understand situations and respond with clarity and precision.
+        <p className ="text-lg md:text-xl text-muted-foreground max-2-2xl sm:text-xs mx-auto opacity-0 animate-fade-in-delay-3 ">I am a self-motivated person and a good team leader; I have organized various successful events and programs and I am adaptable to all challenging situations.
+        Excellent written and verbal communication skills, confidence, and proficiency in public speaking and team management, I am also a keen observer and good listener which aids in my ability to understand a situation and to prepare an appropriate response.
         </p>
         <div className =" opacity-0 animate-fade-in-delay-4 pt-7">
             <a href="#projects" className="consmic-button"> Leadership in Action

@@ -25,10 +25,11 @@ export const Contact =() => {
             setIsSubmitting(false);
         }, 1500);
     };
-    return ( 
+    return (
+      
     <section
     id ="contact" 
-    className="py-24 px-4 relative bg-secondary/30">
+    className="py-24 px-4  bg-secondary/30 sticky bottom-0 left-0 w-full">
         <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
         Get In
@@ -37,12 +38,11 @@ export const Contact =() => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            have a project in mind or just want to say hi? my inbox is always open.
-            i'll try my best to get back to you!
+        I am always open to new challenges and collaborations; please feel free to contact me for further discussion.
         </p>
-        <div className="grid  lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-12 ">
-            <div className=" space-y-8">
-        <h3 className="text-xl font-semibold mb-6 ">Contact Information</h3>
+        <div className="grid  lg:grid-cols-2 grid-cols-1 md:grid-cols-2 gap-12 ">
+        <div className=" space-y-8">
+        <h3 className="items-start justify-start text-xl font-semibold mb-6 ">Contact Information</h3>
         <div className="space-y-6 justify-center">
             <div className="flex items-start space-x-4 ">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -59,17 +59,7 @@ export const Contact =() => {
                 </h2>
             </div>
         </div>
-        <div className="flex items-start space-x-4 ">
-                <div className="p-3 rounded-full bg-primary/10">
-                <PhoneCall className="h-6 w-6 text-primary "/>{" "}
-                </div>
-                    <p className="font-medium ">
-                       Phone
-                        <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors duration-300 ml-2 ">
-                        +1 (234) 567-890
-                        </a>
-                    </p>
-                </div>
+        
             </div>
             <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -83,32 +73,13 @@ export const Contact =() => {
                   </a>
                 </div>   
             </div>
-        </div> 
-                <div className="pt-8 ">
+        
+            <div className="pt-8 ">
                     <h2 className="font-medium mb-4 "> Connect with me </h2>
-                    <div className="flex space-x-4 justify-center">
-                    <a
-                     href="https://www.linkedin.com/in/ashley-rose-2003"
-                     target="_blank" >
-                     <Linkedin className="h-6 w-6 text-primary  " /></a>
-                     <a 
-                    href="https://www.instagram.com/ashley_rose_2003" target="_blank"> 
-                    <Instagram className="h-6 w-6 text-primary  " />
-                    </a>
-                    <a
-                    href="https://github.com/ashley_rose_2003" target="_blank"> 
-                    <Github 
-                    className="h-6 w-6 text-primary "/>
-                    </a>
-                    <a 
-                    href="https://twitter.com/ashley_rose_2003"
-                    target="_blank"> 
-                    <Twitter 
-                    className="h-6 w-6 text-primary "/>
-                    </a>
-                    </div>
-                </div> 
-            </div>
+                    
+                </div>    
+            </div> 
+       
 
         <div
         className="bg-card p-8 rounded-lg shadow-xs"
@@ -180,7 +151,16 @@ export const Contact =() => {
             </div>
             </form>
             </div>
+             
+
+                
             </div>
+            
+             </div> 
             </section>
     );
 };
+<div className="grid grid-cols-2 gap-4">
+  <div>{/* left content */}</div>
+  <div>{/* right content */}</div>
+</div>
