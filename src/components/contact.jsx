@@ -54,7 +54,7 @@ export const Contact = () => {
                 {/* Right Column: Heading + Contact Form Box */}
                 <div className='w-full'>
                     {/* Heading now stays above the form box */}
-                    <h2  className="text-3xl md:text-4xl font-bold mb-4 text-center">
+                    <h2  className="text-xl md:text-4xl font-bold mb-4 text-center">
                     {" "} 
                  Contact 
             <span className="text-primary "> Info</span>
