@@ -96,7 +96,7 @@ export const Nav = () => {
               key={href}
               href={href}
               className ={cn(
-            'transition-colors duration-300 capitalize', currentId === href ? 'text-primary font-semibold ':'text-gray-100 dark:text-gray-100 hover:text-primary'
+            'transition-colors duration-300 capitalize', currentId === href ? 'text-primary font-semibold ':'text-gray-400 dark:text-gray-100 hover:text-primary'
             )}
           >
               {href.replace('#', '')} {/* tidy label */}
