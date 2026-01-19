@@ -40,21 +40,21 @@ export const Contact = () => {
     };
 
     return ( 
-        <div className='min-h-screen flex items-center justify-center p-4 md:p-8'>
+        <div id="contact" className='min-h-screen flex items-center justify-center p-4 md:p-8'>
             <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center'>
                 
                 {/* Left column: Image only */}  
                     <img
                         src={contact} 
                         alt="Contact" 
-                        className='w-full h-auto object-cover shadow-sm'
+                        className='w-full h-auto object-cover shadow-4xl opacity-20'
                     />
                
 
                 {/* Right Column: Heading + Contact Form Box */}
                 <div className='w-full'>
                     {/* Heading now stays above the form box */}
-                    <h2  className="text-xl md:text-4xl font-bold mb-4 text-center">
+                    <h2  className="text-5xl md:text-4xl font-bold mb-4 text-center">
                     {" "} 
                  Contact 
             <span className="text-primary "> Info</span>
@@ -128,7 +128,7 @@ export const Contact = () => {
                             </div>
 
                             {/* Social Icons */}
-                            <div className='flex justify-center items-center  space-x-6 text-lg text-primary'>
+                            <div className='flex justify-end items-end  space-x-6 text-lg text-primary'>
                                 <a href="https://www.linkedin.com/in/ashley-rose-2003" target="_blank" rel="noopener noreferrer">
                                     <Linkedin className="h-5 w-5 dark: opacity-70" />
                                 </a>
