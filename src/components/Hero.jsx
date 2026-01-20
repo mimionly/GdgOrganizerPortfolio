@@ -19,22 +19,24 @@ export const Hero = () => {
         <div className="w-full md:w-1/2 text-center md:text-left">
         <h1 className ="text-3xl md:text-xl sm:text-xl font-bold tracking-tight   leading-tight ">
 
-            <span className ="opacity-0 animate-fade-in lg:text-4xl"> Hi, I'm </span>
-            <span className =" opacity-0 animate-fade-in-delay-1 text-primary py-4 lg:text-4xl">  Ashley </span>
-            <span className ="text-gradient opacity-0 animate-fade-in-delay-1 text-gradient ml lg:text-4xl">  Pinto </span>
+            <span className ="opacity-0 animate-fade-in lg:text-6xl"> Hi, I'm </span>
+            <span className =" opacity-0 animate-fade-in-delay-1 text-primary py-4 lg:text-6xl">  Ashley </span>
+            <span className ="text-gradient opacity-0 animate-fade-in-delay-1 text-gradient ml lg:text-6xl">  Pinto </span>
         </h1>
         
-        <p className ="text-center  md:text-left md:text-xl text-lg max-x-xl sm:text-xs mx-auto md:mx-0 opacity-0 animate-fade-in-delay-3 leading-relaxed">I am a self-motivated individual with strong leadership skills and hands-on
-        experience in organizing successful events and programs. I adapt quickly to
-        challenging situations and thrive in dynamic environments.
-        <br />
-        <span className="block mt-4">
-        With excellent written and verbal communication skills, confidence in public
-        speaking, and effective team management abilities, I am also a keen observer
-        and listener—allowing me to understand situations deeply and respond
-        thoughtfully.
-        </span>
-        </p>
+        <p className="max-w-2xl text-left  md:text-lg lg:text-xl 
+              justify-center opacity-0 animate-fade-in-delay-3">
+  I am a self-motivated individual with strong leadership skills and hands-on
+  experience in organizing successful events and programs. I adapt quickly to
+  challenging situations and thrive in dynamic environments.
+</p>
+
+<p className="max-w-2xl mt-4 text-left  md:text-lg lg:text-xl 
+               opacity-80">
+  With excellent written and verbal communication skills, confidence in public
+  speaking, and effective team management abilities, I am a keen observer and
+  listener—allowing me to understand situations deeply and respond thoughtfully.
+</p>
        </div> 
       </div>
      </div>
