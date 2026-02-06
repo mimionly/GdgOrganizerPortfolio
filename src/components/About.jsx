@@ -82,13 +82,13 @@ export const About = () => {
 
                 
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Event Coordinater</h4>
+                  <h4 className="font-semibold text-lg">Crowdsource Influencer</h4>
                   <p className="text-muted-foreground">
-                    Tiara SJEC
+                    Crowdsource by Google India 
                     
                   </p>
                   <p className="text-muted-foreground">
-                   Mar 2025 - Apr 2025                    
+                  Dec 2025 - Present                     
                   </p>                
                 </div>
                 

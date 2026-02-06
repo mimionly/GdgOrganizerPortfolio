@@ -1,59 +1,82 @@
 import { useState } from "react";
-import {cn} from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
-const skills =[  
-    {name : "HTML/CSS" , levels : "90" , category : "Frontend"},
-    {name : "JavaScript" , levels : "80" , category : "Frontend"},
-    {name : "React" , levels : "75" , category : "Frontend"},
-    {name : "Node.js" , levels : "70" , category : "Backend"},
-    {name : "Python" , levels : "65" , category : "Backend"},
-    {name : "SQL" , levels : "60" , category : "Database"}
+const skills = [  
+    { name: "Multiple Project Coordination", category: "Industry knowledge" },
+    { name: "Program Coordination", category: "Industry knowledge" },
+    { name: "Project Coordination", category: "Industry knowledge" },
+    { name: "Publicity", category: "Industry knowledge" },
+    { name: "Promotional Marketing", category: "Industry knowledge" },
+    { name: "Sales Promotion", category: "Industry knowledge" },
+    { name: "Social Promotion", category: "Industry knowledge" },
+    { name: "Product Marketing", category: "Industry knowledge" },
+    { name: "Digital Marketing", category: "Industry knowledge" },
+    { name: "Marketing", category: "Industry knowledge" },
+    { name: "Writing", category: "Interpersonal Skills" },
+    { name: "Coordinating Skills", category: "Interpersonal Skills" },
+    { name: "English", category: "Languages" },
+    
+
 ];
-const categories =["all", "frontend","backend", "tools"];
 
-export const Skills =() => {
-    const[activeCategory , setActiveCategory] = useState ("all");
-    const filteredSkills =skills.filter((skill) => activeCategory === "all" || skill.category === activeCategory);
+const categories = ["All", "Interpersonal Skills", "Industry knowledge", "Languages"];
+
+export const Skills = () => {
+    const [activeCategory, setActiveCategory] = useState("All");
+
+    // Filter skills based on active category
+    const filteredSkills = activeCategory === "All" 
+        ? skills 
+        : skills.filter(skill => skill.category === activeCategory);
+    
     return (
         <section 
-        
-        id ="skills" 
-        className="py-24 px-4 relative bg-secondary/30" >
-            <div className=" container mx-auto max-w-5xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Skills
-                My <span className="text-primary"> Skills </span>
+            id="skills" 
+            className="py-24 px-4 relative bg-secondary/30"
+        >
+            <div className="container mx-auto max-w-5xl">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center">
+                    My <span className="text-primary">Skills</span>
                 </h2>
-              <div className="flex flex-wrap justify-center gap-4 mb-12  ">
-                {categories.map((category, key) => (
-                    <button key={key} 
-                    onClick={() => setActiveCategory(category)}
-                    className={cn(
-                        "px-2 py-2 rounded-full transition-colors duration-300 capitalize", activeCategory ===category ? "bg-primary text-primary-foreground ": "bg-secondary/70 text-foreground hover:bg-secondary"
-                        )}
+             
+                {/* Category Filter Buttons */}
+                <div className="flex flex-wrap justify-center gap-4 mb-12">
+                    {categories.map((category) => (
+                        <button
+                            key={category}
+                            onClick={() => setActiveCategory(category)}
+                            className={cn(
+                                "px-6 py-2 rounded-full capitalize transition-all duration-300",
+                                activeCategory === category
+                                    ? "bg-primary text-white shadow-lg"
+                                    : "bg-card hover:bg-primary/10 text-muted-foreground hover:text-primary"
+                            )}
                         >
-                        {category}     
-                    </button>
+                            {category}
+                        </button>
+                    ))}
+                </div>
 
-                ))};
-              </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
-                {filteredSkills.map((skill, key) => (
-                   <div key={key} 
-                   className="bg-card p-6 rounded-lg shadow-xs card-hover">
-                <div className="text-left  mb-4">
-                    <h3 className="font-semibold text-lg ">{skill.name} </h3>
+                {/* Skills Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredSkills.map((skill, index) => (
+                        <div 
+                            key={index} 
+                            className="bg-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                        >
+                            <div className="flex items-center justify-between mb-4">
+                                <h3 className="font-semibold text-lg">{skill.name}</h3>
+                                <span className="text-sm text-primary font-medium capitalize px-2 py-1 bg-primary/10 rounded">
+                                    {skill.category}
+                                </span>
+                            </div>
+                            
+                            
+                            
+                            
+                        </div>
+                    ))}
                 </div>
-                <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden ">
-                <div className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out"
-                style={{width : skill.level +"%"}}
-                />
-                </div>
-                <div className="text-right mt-1  ">
-                    <span className="text-sm text-muted-foreground " >{skill.level}%</span>
-                </div>
-            </div>
-                ))}
-            </div>
             </div>
         </section>
     );
