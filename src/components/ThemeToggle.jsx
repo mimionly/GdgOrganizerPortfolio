@@ -28,21 +28,20 @@ useEffect(()=> {
   },[isDarkMode]);
   //[] at the end means run only once when component mounts
 
-  const toggleTheme = () => {
+ const toggleTheme = () => {
   if (isDarkMode) {
-      document.documentElement.classList.remove("dark");
-      //Removes dark styles
-      localStorage.setItem("theme", "light");
-      //Saves "light" in localStorage
-      setIsDarkMode(false);
-    } else {
-      document.documentElement.classList.add("dark");
-      //Enables dark mode
-      localStorage.setItem("theme", "dark");
-      //Saves "dark" in localStorage
-      setIsDarkMode(true);
-    }
-  };
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+    setIsDarkMode(false);
+  } else {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+    setIsDarkMode(true);
+  }
+  
+  // Dispatch custom event so StarBackground knows theme changed
+  window.dispatchEvent(new Event("themeChange"));
+};
 
   return (
     <button
