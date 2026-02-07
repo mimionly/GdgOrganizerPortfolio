@@ -30,7 +30,7 @@ export const StarBackground = () => {
         size: Math.random() * 2 + 1,
         x: Math.random() * 100,
         y: Math.random() * 50,
-        delay: Math.random() * 10 ,
+        delay: Math.random() * 5 ,
         animationDuration: Math.random() * 4 + 1,
       });
     }
