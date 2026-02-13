@@ -6,7 +6,8 @@ import { Hero } from "../components/Hero";
 import { About } from "../components/About";
 import { Skills } from "../components/Skills";
 import { Management } from '../components/Management';
-import { Contact } from "../components/Contacts";
+import { Contacts } from "../components/Contacts";
+import { Footer } from "../components/Footer";
 
 export const Home =() => {
     return (
@@ -19,8 +20,8 @@ export const Home =() => {
           <About/>
           <Skills />
           <Management />
-          <Contact />
-         
+          <Contacts />
+          <Footer />
         </main>
     </div>
 
