@@ -5,7 +5,7 @@ import { Nav } from "../components/Nav";
 import { Hero } from "../components/Hero";
 import { About } from "../components/About";
 import { Skills } from "../components/Skills";
-import { Proj } from "../components/proj";
+import { Management } from '../components/Management';
 import { Contact } from "../components/contact";
 
 export const Home =() => {
@@ -18,7 +18,7 @@ export const Home =() => {
           <Hero/>
           <About/>
           <Skills />
-          <Proj />
+          <Management />
           <Contact />
          
         </main>
