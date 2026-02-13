@@ -31,7 +31,7 @@ Built to experiment with:
 cd client
 npm install
 npm run dev
-
+```
 **UI innovation** 
 Instead of a conventional hamburger menu, this project uses a progress-based navigation bar that:
 - Tracks user scroll position
