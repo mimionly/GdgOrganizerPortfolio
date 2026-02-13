@@ -2,6 +2,7 @@ An experimental full-stack project exploring modern frontend and backend archite
 
 ##  Live Demo
 Frontend: https://whois-ashley-9io2-dawtq6zrc-risha-bits-projects.vercel.app/
+
 Backend:
 
 ##  Tech Stack
