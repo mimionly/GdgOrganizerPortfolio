@@ -6,7 +6,7 @@ import { Hero } from "../components/Hero";
 import { About } from "../components/About";
 import { Skills } from "../components/Skills";
 import { Management } from '../components/Management';
-import { Contact } from "../components/contact";
+import { Contact } from "../components/Contacts";
 
 export const Home =() => {
     return (

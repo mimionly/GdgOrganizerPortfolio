@@ -11,7 +11,7 @@ export const Management = () => {
       
       <div className="container mx-auto max-w-7xl px-4">
         
-        {/* ✅ FIXED: Properly nested header */}
+        {/* FIXED: Properly nested header */}
     <div className="relative z-50 text-center py-8 min-h-[200px]">
      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center">
     Achievements  
