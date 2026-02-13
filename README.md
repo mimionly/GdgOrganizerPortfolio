@@ -19,7 +19,7 @@ Frontend:
 - Responsive layout
 - API integration
 - Dynamic routing
-- 
+
 ## Why This Project?
 Built to experiment with:
 - Frontend state management
