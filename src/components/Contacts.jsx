@@ -32,7 +32,7 @@ export const Contacts = () => {
 
     return ( 
     <div id="contact" className='py-16 '>
-        <div className='w-full max-w-6xl mx-auto px-4 md:px-8'>
+        <div className='animate-fade-in-delay-1 w-full max-w-6xl mx-auto px-4 md:px-8'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-12'>
                 
                 {/* Left column: Image */}  
