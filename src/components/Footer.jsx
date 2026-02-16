@@ -5,4 +5,4 @@ export const Footer = () => {
             <p className="text-sm  text-center">{copyright}</p>
         </footer>
     );
-};
+ }; 

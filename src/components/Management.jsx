@@ -7,7 +7,7 @@ import { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper/module
 
 export const Management = () => {
   return (
-    <div id="Project" className="animate-fade-in-delay-1 w-full flex flex-col items-center py-6 md:py-12 bg-gray-50 px-4 sm:px-6 lg:px-8">
+    <div id="Project" className="animate-fade-in-delay-1 w-full flex flex-col items-center py-6 md:py-12  px-4 sm:px-6 lg:px-8">
       
       <div className="container mx-auto max-w-7xl px-4">
         
