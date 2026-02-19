@@ -3,7 +3,7 @@ import {
     Github,
     Instagram,
     Linkedin, 
-    Twitter,
+    
     Send,
     Mail,
     MapPin,
@@ -132,7 +132,7 @@ export const Contacts = () => {
                                 <div className='space-y-4'>
                                     <div className='flex items-start gap-3'>
                                         <Mail className='w-5 h-5 mt-0.5 text-primary shrink-0' />
-                                        <p className='text-sm'>ashleypinto@gmail.com</p>
+                                        <p className='text-sm'>cleon.ap25@gmail.com</p>
                                     </div>
                                     
                                     <div className='flex items-start gap-3'>
@@ -157,9 +157,7 @@ export const Contacts = () => {
                                     <a href="https://github.com/Ashley-Pinto25" target="_blank" rel="noopener noreferrer" className='text-primary/50'> 
                                         <Github className="h-5 w-5" />
                                     </a>
-                                    <a href="https://twitter.com/ashley_rose_2003" target="_blank" rel="noopener noreferrer" className='text-primary/50'> 
-                                        <Twitter className="h-5 w-5" />
-                                    </a>
+                                    
                                 </div>
                             </div>
                         </div>
