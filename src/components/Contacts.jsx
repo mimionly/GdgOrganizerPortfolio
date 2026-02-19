@@ -9,27 +9,42 @@ import {
     MapPin,
     Phone
 } from "lucide-react";
+import { createClient} from '@supabase/supabase-js';
 import contact from '../assets/contact.png';
-
+// Initialize Supabase client OUTSIDE component (or use env variables)
+const supabaseUrl = 'https://japomrqucmimdwhmlvvi.supabase.co';
+const supabaseKey = 'sb_publishable_TXGFhFiKF1HULBmoEkzJRQ_LZIFczzy';
+const supabase = createClient(supabaseUrl, supabaseKey)
 export const Contacts = () => {
-    
-    const [status, setStatus] = useState('idle');
-
-    const handleSubmit = (e) => {
+// Create a single supabase client for interacting with your database
+    const [status, setStatus] = useState('idle'); // idle | sending | sent
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
-        const data = Object.fromEntries(formData);
-        
-        setStatus('sending'); 
-        
-        setTimeout(() => {
-            alert(`Thanks ${data.name}! We have Received Your Message.`);
-            e.target.reset();
+        const submission = Object.fromEntries(formData);
+        console.log('Form submission:', submission);
+        setStatus('sending');
+        try {
+            const { data , error } = await supabase
+            .from("entries")
+            .insert([submission])
+            .select(); // Return the inserted row(s)
+            if (error) {
+                console.error('Supabase error:', error); // Detailed error logging
+                throw error;
+            }
+            console.log('Success:', data);
             setStatus('sent');
-            setTimeout(() => setStatus('idle'), 2000);
-        }, 1000);
-    };
-
+            alert("Thank you for contacting us!");
+            e.target.reset();
+            setTimeout(() => setStatus("idle"), 2000);
+        }
+          catch (error) {
+        console.error('Catch error:', error.message, error.code);
+        alert(`Error: ${error.message || 'Unknown error'}`);
+        setStatus('idle');
+    }
+};
     return ( 
     <div id="contact" className='py-16 '>
         <div className='animate-fade-in-delay-1 w-full max-w-6xl mx-auto px-4 md:px-8'>
@@ -107,8 +122,8 @@ export const Contacts = () => {
                                 >
                                     <Send className='w-4 h-4'/>
                                     {status === 'idle' && 'Send Message'}
-                                    {status === 'sending' && "Sending..."}
-                                    {status === 'sent' && 'Sent!'} 
+                                    {status === 'sending' && "sending..."}
+                                    {status === 'sent' && 'sent!'} 
                                 </button>
                             </form>
 
@@ -133,13 +148,13 @@ export const Contacts = () => {
 
                                 {/* Social Icons */}
                                 <div className='flex gap-4 mt-6 lg:mt-0 justify-end'>
-                                    <a href="https://www.linkedin.com/in/ashley-rose-2003" target="_blank" rel="noopener noreferrer" className='text-primary/50'>
+                                    <a href="https://www.linkedin.com/in/ashley-cleon-pinto/" target="_blank" rel="noopener noreferrer" className='text-primary/50'>
                                         <Linkedin className="h-5 w-5" />
                                     </a>
-                                    <a href="https://www.instagram.com/ashley_rose_2003" target="_blank" rel="noopener noreferrer" className='text-primary/50'> 
+                                    <a href="https://www.instagram.com/ashley_pinto25/" target="_blank" rel="noopener noreferrer" className='text-primary/50'> 
                                         <Instagram className="h-5 w-5" />
                                     </a>
-                                    <a href="https://github.com/ashley_rose_2003" target="_blank" rel="noopener noreferrer" className='text-primary/50'> 
+                                    <a href="https://github.com/Ashley-Pinto25" target="_blank" rel="noopener noreferrer" className='text-primary/50'> 
                                         <Github className="h-5 w-5" />
                                     </a>
                                     <a href="https://twitter.com/ashley_rose_2003" target="_blank" rel="noopener noreferrer" className='text-primary/50'> 
